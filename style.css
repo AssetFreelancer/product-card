@@ -11,10 +11,10 @@
 
 .product-card {
   display: flex;
-  gap: 20px;
-  width: 340px;
-  background-color: #F7F7FA;
-  padding: 25px;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 45px;
+  
 }
 
 .img-description {
@@ -60,12 +60,15 @@
 
 .product {
   list-style-type: none;
+  width: 340px;
+  background-color: #F7F7FA;
+  padding: 25px;
 }
 
 .product-img {
   margin-bottom: 30px;
 }
-
+/*
 .product-wrapper {
   display: flex;
   justify-content: center;
