@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
-  color: #515076;
-  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   background-image: url(img/background.png);
   background-repeat: no-repeat;
+  color: #515076;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .title {
@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-.product-card {
+.product-cards {
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
