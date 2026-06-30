@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.catalog {
+  background-image: url(img/background.png);
+  background-repeat: no-repeat;
+  color: #515076;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.catalog__title {
+  font-size: 70px;
+  line-height: 78px;
+  text-align: center;
+}
+
+.catalog__grid {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 45px;  
+}
