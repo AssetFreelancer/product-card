@@ -29,7 +29,7 @@
   margin-bottom: 15px;
 }
 
-.product-card__features .product-card__features-list{
+.product-card__features, .product-card__features-list{
   font-size: 13px;
   line-height: 18px;
   margin-bottom: 25px;
@@ -41,9 +41,6 @@
   align-items: center;
   margin-top: auto;
   padding-top: 15px;
-}
-
-.product-card__price-label .product-card__price-value{
   font-size: 20px;
   line-height: 24px;
 }
