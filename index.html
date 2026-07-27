@@ -7,12 +7,20 @@
   <link rel="stylesheet" href="/style/style.css">
   <link rel="stylesheet" href="/style/catalog.css">
   <link rel="stylesheet" href="/style/product-card.css">
+  <link rel="stylesheet" href="/style/button.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="catalog">
   <h1 class="catalog__title">Выбери свой продукт</h1>
+    <div class="buttons-container">
+      <button class="button-js" id="btn-change-first-card">Изменить первую карточку</button>
+      <button class="button-js" id="btn-change-all-cards">Изменить все карточки</button>
+      <button class="button-js" id="btn-open-google">Открыть сайт Google</button>
+      <button class="button-js" id="btn-log-to-console">Вывод сообщения в конслоь лог</button>
+      <button class="button-js" id="btn-change-color">Кнопка меняет свой цвет</button>
+    </div>
     <ul class="catalog__grid">
       <li class="product-card">
         <img class="product-card__image" src="img/moisturizing_mousse.png" alt="Увлажняющий мусс"/>
@@ -99,5 +107,6 @@
         </div>
       </li>
     </ul>
+    <script src="main.js"></script>
 </body>
 </html>
