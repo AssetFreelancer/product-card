@@ -8,7 +8,7 @@ const blueColorHash = '#0000ff'
 changeColorCardButton.addEventListener('click', () =>{
   productCards.forEach((card) => {
   card.style.backgroundColor = greenColorHash;
-})
+  })
 })
 
 // Покраска первой карточки
@@ -18,7 +18,7 @@ const changeColorFirstCard = document.querySelector('#btn-change-first-card');
 
 changeColorFirstCard.addEventListener('click', () =>{
   changeColorFirstCardButton.style.backgroundColor = blueColorHash;
-  })
+})
 
 //Открыть сайт Google
 
@@ -48,10 +48,10 @@ function outputConsoleLog(message) {
 //Используя слушатели событий, сделать так, что бы при наведении на главный заголовок ("Выбери свой продукт")
 //  - он выводился в консоль. (контент элемента, а не произвольный текст, написанный от руки)
 
-const chooseYourProduct = document.querySelector('.catalog__title');
+const catalogTitle = document.querySelector('.catalog__title');
 
-chooseYourProduct.addEventListener('mouseover', () => {
-  console.log(chooseYourProduct.textContent);
+catalogTitle.addEventListener('mouseover', () => {
+  console.log(catalogTitle.textContent);
 })
 
 //Добавить кнопку, при нажатии на которую мы будем менять её цвет с одного на другой. 
