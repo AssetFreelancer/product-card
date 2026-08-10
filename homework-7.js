@@ -1,54 +1,44 @@
 //Создать функцию, которая принимает 2 параметра: город и температуру и выводит сообщение в консоль 
 // "Сейчас в X температура — Y градусов по Цельсию"
 
-function ads(city, temperature) {
+function display_temperature(city, temperature) {
   console.log(`Сейчас в ${city} температура — ${temperature} градусов по Цельсию`)
 }
 
-ads('Медине', 50);
+display_temperature('Медине', 50);
 //---------------------------------------
-const ads_2 = (city, temperature) => {
+const display_temperature_2 = (city, temperature) => {
   console.log(`Сейчас в ${city} температура — ${temperature} градусов по Цельсию`);
 }
 
-ads_2('Алматы', 35);
+display_temperature_2('Алматы', 35);
 
 //Создать переменную, которая хранит внутри себя скорость света (гуглим). Создать функцию, которая принимает 1 
 // аргумент - скорость, внутри функции происходит проверка: если переданная скорость выше скорости света — 
 // выводим лог "Сверхсветовая скорость", если ниже — "Субсветовая скорость"? если равна — "Скорость света"
 
-const speedLight = 299792458;
+const speedOfLight = 299792458;
 
-function speed(speedArgument) {
-  if (speedArgument > speedLight) {
+function getSpeed(speedArgument) {
+  if (speedArgument > speedOfLight) {
     console.log('Сверхсветовая скорость')
-  }
-  else {
-    if (speedArgument < speedLight) {
+  } else if (speedArgument < speedOfLight) {
       console.log('Субсветовая скорость')
-    }
-      else {console.log('Скорость света')}
-    
-  }
+  } else {console.log('Скорость света')}
 }
 
-speed(2997924581);
+getSpeed(2997924581);
 //---------------------------------------
-const speedLight2 = 299792458;
-const speed2 = (speedArgument2) => {
-  if (speedArgument2 > speedLight2) {
+
+const getSpeed2 = (speedArgument2) => {
+  if (speedArgument2 > speedOfLight) {
     console.log('Сверхсветовая скорость')
-  }
-  else {
-    if (speedArgument2 < speedLight2) {
-      console.log('Субсветовая скорость')
-    }
-      else {console.log('Скорость света')}
-    
-  }
+  } else if (speedArgument2 < speedOfLight) {
+  console.log('Субсветовая скорость')
+  } else {console.log('Скорость света')}
 }
 
-speed2(299792458);
+getSpeed2(299792458);
 
 //Создать переменную №1, которая содержит продукт и переменную №2, которая содержит его цену (на ваше усмотрение). 
 // Далее создаем функцию, которая принимает 1 параметр - текущий бюджет, внутри функции происходит проверка: 
@@ -62,10 +52,9 @@ const price = 100000;
 function buy(budget) {
   if (budget >= price) {
     console.log(`${home} приобретён. Спасибо за покупку!`)
-  }
-  else {
-    x = price - budget;
-    console.log(`Вам не хватает ${x}$, пополните баланс`)
+  } else {
+    let difference = price - budget;
+    console.log(`Вам не хватает ${difference}$, пополните баланс`)
   }
 }
 
@@ -75,8 +64,9 @@ const home2 = "Квартира в Медине";
 const price2 = 200000;
 
 const buy2 = budget2 => {
-  budget2 >= price2 ? console.log(`${home2} приобретён. Спасибо за покупку!`) 
-  : console.log(`Вам не хватает ${x}$, пополните баланс`)
+  budget2 >= price2 
+    ? console.log(`${home2} приобретён. Спасибо за покупку!`) 
+    : console.log(`Вам не хватает ${x}$, пополните баланс`)
 }
 
 buy2(800000)
@@ -84,26 +74,20 @@ buy2(800000)
 //Создать 1 функцию и именовать её по своему усмотрению
 //принимает имя и время суток (утро/день/вечер/ночь), выдавая вежливое сообщение.
 
-const greet_user = (name, timeOfDay) => {
+const greetUser = (name, timeOfDay) => {
   if (timeOfDay >= '04:00' && timeOfDay < '11:00') {
     console.log(`Доброе утро ${name}!`);
-    }
-  else {
-    if (timeOfDay >= '11:00' && timeOfDay < '16:00') {
+    } else if (timeOfDay >= '11:00' && timeOfDay < '16:00') {
     console.log(`Добрый день ${name}!`);
     }
-    else {
-      if (timeOfDay >= '16:00' && timeOfDay < '22:00') {
+    else if (timeOfDay >= '16:00' && timeOfDay < '22:00') {
     console.log(`Добрый вечер ${name}!`);
-      }
-      else {
-        console.log(`Доброй ночи ${name}!`);
-      }
+    }
+    else { console.log(`Доброй ночи ${name}!`);
     }
   }
-  }
 
-greet_user('Асет', '02:00')
+greetUser('Асет', '02:00')
 
 //Создать 3 переменных (без разницы каких) и именовать их по своему усмотрению
 
