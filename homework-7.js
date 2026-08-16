@@ -81,15 +81,15 @@ buy2(800000)
 const greetUser = (name, timeOfDay) => {
   if (timeOfDay >= '04:00' && timeOfDay < '11:00') {
     console.log(`Доброе утро ${name}!`);
-    } else if (timeOfDay >= '11:00' && timeOfDay < '16:00') {
+  } else if (timeOfDay >= '11:00' && timeOfDay < '16:00') {
     console.log(`Добрый день ${name}!`);
-    }
-    else if (timeOfDay >= '16:00' && timeOfDay < '22:00') {
+  }
+  else if (timeOfDay >= '16:00' && timeOfDay < '22:00') {
     console.log(`Добрый вечер ${name}!`);
-    }
-    else { 
-      console.log(`Доброй ночи ${name}!`);
-    }
+  }
+  else { 
+    console.log(`Доброй ночи ${name}!`);
+  }
   }
 
 greetUser('Асет', '02:00')
