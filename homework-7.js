@@ -7,11 +7,11 @@ function displayTemperature(city, temperature) {
 
 displayTemperature('Медине', 50);
 //---------------------------------------
-const displayTemperature_2 = (city, temperature) => {
+const displayTemperature2 = (city, temperature) => {
   console.log(`Сейчас в ${city} температура — ${temperature} градусов по Цельсию`);
 }
 
-displayTemperature_2('Алматы', 35);
+displayTemperature2('Алматы', 35);
 
 //Создать переменную, которая хранит внутри себя скорость света (гуглим). Создать функцию, которая принимает 1 
 // аргумент - скорость, внутри функции происходит проверка: если переданная скорость выше скорости света — 
@@ -83,14 +83,12 @@ const greetUser = (name, timeOfDay) => {
     console.log(`Доброе утро ${name}!`);
   } else if (timeOfDay >= '11:00' && timeOfDay < '16:00') {
     console.log(`Добрый день ${name}!`);
-  }
-  else if (timeOfDay >= '16:00' && timeOfDay < '22:00') {
+  } else if (timeOfDay >= '16:00' && timeOfDay < '22:00') {
     console.log(`Добрый вечер ${name}!`);
-  }
-  else { 
+  } else { 
     console.log(`Доброй ночи ${name}!`);
   }
-  }
+}
 
 greetUser('Асет', '02:00')
 
