@@ -24,25 +24,27 @@ const myCar = {
   model: "Explorer",
   year: "2015",
   color: "white",
-  transmission: "auto",
-  owner: personalData
+  transmission: "auto"
 }
+
+myCar.owner = personalData;
+console.log(myCar);
 
 //Написать функцию которая аргументом будет принимать объект, описанный в пункте №4. Она проверяет, есть ли в 
 // объекте свойство "максимальная скорость", если нет - добавляет его и задает значение, если есть - прекращает 
 // выполнение (ничего не делает)
 
-const showCarInfo = (maxSpeed) => {
-  if ("maxSpeed" in myCar) {
+const addMaxSpeed = (myCarInfo) => {
+  myCarInfo = myCar;
+  if("maxSpeed" in myCarInfo) {
     return
   } else {
-    myCarInfo = {...myCar, maxSpeed}
+    myCarInfo.maxSpeed = 280;
   }
 }
 
-showCarInfo("280");
-console.log(myCarInfo);
-
+addMaxSpeed();
+console.log(myCar);
 //Написать функцию, которая получает первым аргументом — объект, а вторым аргументом — свойство объекта, которое 
 // нужно вывести и выводит его значение.
 
@@ -144,8 +146,16 @@ console.log(allBooks);
 // (или какой-то логики, связанной с вашей сущностью), устанавливаем true или false. Что я хочу этим сказать: 
 // если книга выпущена позже 2000 года, устанавливаем true (да, это редкий), нет - false (значит это не редкий).
 
-const booksYear = booksRings.map(bookRings => bookRings.year);
-const booksIsRare = booksYear.map(booksYear => booksYear < 1955);
+const booksMassive = booksRings.map(({title, author, year, cover, genre}) => ({
+  title, author, year, cover, genre, isRare : year < 1955
+}));
 
-console.log(booksYear);
-console.log(booksIsRare);
+console.log(booksMassive);
+
+//---------------------
+const numbers = [1,2,3,4,5];
+const objNum = numbers.map((number,index, numbers) => {
+  return {value: number, index: index};
+});
+console.log(objNum);
+//---------------------
