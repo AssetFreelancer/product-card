@@ -35,7 +35,6 @@ console.log(myCar);
 // выполнение (ничего не делает)
 
 const addMaxSpeed = (myCarInfo) => {
-  myCarInfo = myCar;
   if("maxSpeed" in myCarInfo) {
     return
   } else {
@@ -43,7 +42,7 @@ const addMaxSpeed = (myCarInfo) => {
   }
 }
 
-addMaxSpeed();
+addMaxSpeed(myCar);
 console.log(myCar);
 //Написать функцию, которая получает первым аргументом — объект, а вторым аргументом — свойство объекта, которое 
 // нужно вывести и выводит его значение.
@@ -146,8 +145,12 @@ console.log(allBooks);
 // (или какой-то логики, связанной с вашей сущностью), устанавливаем true или false. Что я хочу этим сказать: 
 // если книга выпущена позже 2000 года, устанавливаем true (да, это редкий), нет - false (значит это не редкий).
 
-const booksMassive = booksRings.map(({title, author, year, cover, genre}) => ({
-  title, author, year, cover, genre, isRare : year < 1955
+// const booksMassive = booksRings.map(({title, author, year, cover, genre}) => ({
+//   title, author, year, cover, genre, isRare : year < 1955
+// }));
+
+const booksMassive = booksRings.map(book => ({
+  ...book, isRare : book.year < 1955
 }));
 
 console.log(booksMassive);
