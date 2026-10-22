@@ -23,8 +23,11 @@ console.log(creed2);
 //Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный 
 // ("переворачивать") . Два вышеуказанных массива с помощью этой функции перевернуть.
 
-const revNum = numbers.reverse();
-const revBooks = ibnTaimiiBooks.reverse();
+const revArray = array => 
+  [...array].reverse();
+
+const revNum = revArray(numbers);
+const revBooks = revArray(ibnTaimiiBooks);
 console.log(revNum);
 console.log(revBooks);
 
@@ -52,38 +55,28 @@ console.log(usersWithCom);
 //Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, 
 // а те, у кого id больше 5, имели postId: 1
 
-
-const replacePostId = userComments.map(element => {
-  if(element.id <= 5) {
-    return {
-      ...element, postId:2
-    };
-  }
-  return {
-    ...element, postId:1
-  }
-})
+const replacePostId = userComments.map(element => ({
+  ...element, postId : element.id <= 5 ? 2 : 1
+}));
 console.log(replacePostId);
+
 
 // Перебрать массив, что бы объекты состояли только из айди и имени
 
-const getIdName = userComments.map(({id, name}) => ({
+const IdNameComments = userComments.map(({id, name}) => ({
   id, name
 }))
-console.log(getIdName);
+console.log(IdNameComments);
 
 // Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела сообщения (body) 
 // больше 180 символов - устанавливаем true, меньше - false.
 
 const addInvalid = userComments.map(element => {
-  if(element.body.length > 180) {
     return {
-      ...element, isInvalid:true
+      ...element, 
+    isInvalid : element.body.length > 180 ? true : false
     };
-  } return {
-    ...element, isInvalid:false
-  };
-})
+});
 
 console.log(addInvalid);
 
