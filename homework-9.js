@@ -74,10 +74,9 @@ console.log(IdNameComments);
 const addInvalid = userComments.map(element => {
     return {
       ...element, 
-    isInvalid : element.body.length > 180 ? true : false
+    isInvalid: element.body.length > 180
     };
 });
-
 console.log(addInvalid);
 
 // Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть 
