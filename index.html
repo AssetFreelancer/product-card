@@ -21,7 +21,7 @@
       <button class="button-js" id="btn-log-to-console">Вывод сообщения в конслоь лог</button>
       <button class="button-js" id="btn-change-color">Кнопка меняет свой цвет</button>
     </div>
-    <ul class="catalog__grid">
+    <!-- <ul class="catalog__grid">
       <li class="product-card">
         <img class="product-card__image" src="img/moisturizing_mousse.png" alt="Увлажняющий мусс"/>
         <span class="product-card__category">для нормальной кожи</span>
@@ -106,9 +106,29 @@
           <span class="product-card__price-value">7 520 ₽</span>
         </div>
       </li>
-    </ul>
+    </ul> -->
+
+<ul id="products-list" class="catalog__grid"></ul>
+<template id="product-card-template">
+  <li class="product-card">
+    <img class="product-card__image" src="" alt=""/>
+    <span class="product-card__category"></span>
+    <h2 class="product-card__title"></h2>
+    <p class="product-card__description"></p>
+    <span class="product-card__features">Состав: </span>
+    <ul class="product-card__features-list"></ul>
+    <div class="product-card__footer">
+      <b class="product-card__price-label">Цена</b>
+      <span class="product-card__price-value"></span>
+    </div>
+  </li>
+</template>
+
+<ul id="products-list"></ul>
     <script src="main.js"></script>
     <script src="homework-7.js"></script>
     <script src="homework-8.js"></script>
+    <script type="module" src="homework-9.js"></script>
+    <script type="module" src="homework-10.js"></script>
 </body>
 </html>
