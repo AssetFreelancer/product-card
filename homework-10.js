@@ -29,12 +29,15 @@ items.forEach(product => {
 // Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - 
 // его описание
 
-const prouctsNewArray = products.reduce((acc, product) => {
-  acc[product.title] = product.description;
+const productsNewArray = products.reduce((acc, product) => {
+  const newProduct = {
+    [product.title]: product.description
+  }
+  acc.push(newProduct);
   return acc;
-}, {});
+}, []);
 
-console.log(prouctsNewArray);
+console.log(productsNewArray);
 
 // 5*. Реализовать функцию, которая при старте страницы выводит сообщение (через функцию prompt) 
 // "Сколько карточек отобразить? От 1 до 5" и в зависимости от результата - будет выводить введенное 
@@ -44,12 +47,22 @@ console.log(prouctsNewArray);
 
 // P.S. - визуально, карточки у вас не должны поменяться вообще.
 
-const quantityProducts = prompt('Сколько карточек отобразить? От 1 до 5');
-if (quantityProducts > 5) {
-  alert('От 1 до 5'); }
-  else {
-  const selectedProducts = products.slice(0, quantityProducts);
+const getInputUser = () => {
+while (true) {
+  const getQuantityProducts = prompt('Сколько карточек отобразить? От 1 до 5');
+  const quantityProducts = Number(getQuantityProducts);
+  if (quantityProducts > 5 || quantityProducts <= 0 || Number.isNaN(quantityProducts)) {
+    alert('Введите число От 1 до 5');
+    getInputUser();
+}
+    return quantityProducts;
+    
+}
+}
+const countProduct = getInputUser();
+
+const renderProductsNew = () => {
+  const selectedProducts = products.slice(0, countProduct);
   renderProducts(selectedProducts);
 }
-
-
+renderProductsNew();
