@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/style/catalog.css">
   <link rel="stylesheet" href="/style/product-card.css">
   <link rel="stylesheet" href="/style/button.css">
+  <link rel="stylesheet" href="/style/footer.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
       <button class="button-js" id="btn-log-to-console">Вывод сообщения в конслоь лог</button>
       <button class="button-js" id="btn-change-color">Кнопка меняет свой цвет</button>
     </div>
-    <ul class="catalog__grid">
+    <!-- <ul class="catalog__grid">
       <li class="product-card">
         <img class="product-card__image" src="img/moisturizing_mousse.png" alt="Увлажняющий мусс"/>
         <span class="product-card__category">для нормальной кожи</span>
@@ -106,9 +107,57 @@
           <span class="product-card__price-value">7 520 ₽</span>
         </div>
       </li>
-    </ul>
-    <script src="main.js"></script>
-    <script src="homework-7.js"></script>
-    <script src="homework-8.js"></script>
+    </ul> -->
+
+  <ul id="products-list" class="catalog__grid"></ul>
+  <template id="product-card-template">
+    <li class="product-card">
+      <img class="product-card__image" src="" alt=""/>
+      <span class="product-card__category"></span>
+      <h2 class="product-card__title"></h2>
+      <p class="product-card__description"></p>
+      <span class="product-card__features">Состав: </span>
+      <ul class="product-card__features-list"></ul>
+      <div class="product-card__footer">
+        <b class="product-card__price-label">Цена</b>
+        <span class="product-card__price-value"></span>
+      </div>
+    </li>
+  </template>
+  <div class="container_button">
+    <button type="button" class="button__openform">Регистрация</button>
+    <form action="" class="modal_showed modal">
+      <input type="text" name="name" required placeholder="Введите Имя">
+      <input type="text" name="name" required placeholder="Введите Имя">
+      <input type="text" name="name" required placeholder="Введите Имя">
+    </form>
+  </div>
+  
+<footer class="footer">
+  <h2 class="footer__title">Product Cards</h2>
+  <p class="footer__text">У нас самые лучшие продукты для кожи!</p>
+  <img class="footer__tg" src="/img/Telegram.png" alt="Telegram">
+  <img class="footer__vk" src="/img/VK.png" alt="VK">
+  <p class="footer__text_center">Подпишись на наши акции:</p>
+  <form id="form-email" class="subscribe-form" action="">
+    <input id="form-email_in" class="subscribe-form__input" placeholder="Введи Email..." type="email" required name="email">
+    <button class="subscribe-form__button" type="submit">Подписаться</button>
+  </form>
+  <div class="footer__line"></div>
+  <p class="footer__email">www.product-cards.com©all right reserve</p>
+  <nav class="footer__nav">
+    <p class="footer__nav-title">Быстрые ссылки</p>
+    <p class="footer__nav-link">Главная</p>
+    <p class="footer__nav-link">Магазин</p>
+    <p class="footer__nav-link">Контакты</p>
+  </nav>
+</footer>
+
+  <script src="main.js"></script>
+  <script src="homework-7.js"></script>
+  <script src="homework-8.js"></script>
+  <script type="module" src="homework-9.js"></script>
+  <script type="module" src="homework-10.js"></script>
+  <script src="homework-11.js"></script>
 </body>
 </html>
